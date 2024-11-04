@@ -1,0 +1,31 @@
+MCU = STM32F401
+BOOTLOADER = stm32-dfu
+
+
+I2C_DRIVER_REQUIRED = yes
+
+ENCODER_ENABLE = yes
+ENCODER_MAP_ENABLE = yes
+CONSOLE_ENALBE = yes
+WPM_ENABLE = yes
+
+OLED_ENABLE = yes
+LTO_ENABLE = yes
+OLED_DRIVER_ENABLE = yes
+OLED_DRIVER = ssd1306
+OLED_TRANSPORT = i2c
+
+SPLIT_KEYBOARD = yes
+SERIAL_DRIVER = usart
+
+CAPS_WORD_ENABLE = yes
+
+POINTING_DEVICE_ENABLE = yes
+POINTING_DEVICE_DRIVER = pimoroni_trackball
+
+PIMORONI_TRACKBALL_ENABLE = no
+ifeq ($(strip $(PIMORONI_TRACKBALL_ENABLE)), yes)
+    POINTING_DEVICE_ENABLE = yes
+    SRC += drivers/sensors/pimoroni_trackball.c
+    QUANTUM_LIB_SRC += i2c_master.c
+endif

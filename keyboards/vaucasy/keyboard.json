@@ -1,0 +1,144 @@
+{
+    "manufacturer": "Bence Baki",
+    "keyboard_name": "vaucasy",
+    "maintainer": "engemkeres",
+    "bootloader": "stm32-dfu",
+    "tags": ["ortho", "split"],
+    "diode_direction": "COL2ROW",
+    "features": {
+        "bootmagic": false,
+        "command": false,
+        "console": false,
+        "extrakey": true,
+        "mousekey": true,
+        "nkro": true
+    },
+    "debounce": 5,
+    "io_delay": 30,
+    "oled": {
+        "enabled":true
+    },
+    "encoder": {
+        "rotary": [{"pin_a":"B13", "pin_b":"B14", "resolution":4}]
+    },
+    "matrix_pins": {
+
+        "cols": ["B2", "C12", "B3", "B4", "A7", "A6", "A5"],
+
+        "rows": ["B10", "D2", "B5", "A4", "C2"]
+    },
+    "split": {
+        "enabled" : true,
+        "encoder": {
+            "right": {
+                "rotary": [{"pin_a":"B13", "pin_b":"B14", "resolution":4}]
+            }
+        },
+        "matrix_pins": {
+            "right":{
+                "cols": ["B3", "C4", "C5", "C10", "A5", "A7", "D2"],
+                "rows": ["C12", "B4", "A6", "C11", "C2"]
+            }
+        },
+        "serial": {
+            "driver" : "usart",
+            "pin" : "A9"
+        },
+        "transport": {
+            "protocol": "serial"
+        },
+        "usb_detect": {
+            "enabled": true
+        }
+    },
+    "processor": "STM32F401",
+    "url": "",
+    "usb": {
+        "device_version": "1.0.0",
+        "pid": "0x0000",
+        "vid": "0xFEED"
+    },
+    "build": {
+        "debounce_type": "sym_eager_pr",
+        "firmware_format": "bin"
+    },
+    "layouts": {
+        "LAYOUT_4x7": {
+            "layout": [
+                {"matrix": [0, 0], "x": 0, "y": 1},
+                {"matrix": [0, 1], "x": 1, "y": 1},
+                {"matrix": [0, 2], "x": 2, "y": 1},
+                {"matrix": [0, 3], "x": 3, "y": 0.75},
+                {"matrix": [0, 4], "x": 4, "y": 0.5},
+                {"matrix": [0, 5], "x": 5, "y": 0.75},
+                {"matrix": [0, 6], "x": 6, "y": 1},
+
+                {"matrix": [5, 0], "x": 11, "y": 1},
+                {"matrix": [5, 1], "x": 12, "y": 0.75},
+                {"matrix": [5, 2], "x": 13, "y": 0.5},
+                {"matrix": [5, 3], "x": 14, "y": 0.75},
+                {"matrix": [5, 4], "x": 15, "y": 1},
+                {"matrix": [5, 5], "x": 16, "y": 1},
+                {"matrix": [5, 6], "x": 16, "y": 1},
+
+                {"matrix": [1, 0], "x": 0, "y": 2},
+                {"matrix": [1, 1], "x": 1, "y": 2},
+                {"matrix": [1, 2], "x": 2, "y": 2},
+                {"matrix": [1, 3], "x": 3, "y": 1.75},
+                {"matrix": [1, 4], "x": 4, "y": 1.5},
+                {"matrix": [1, 5], "x": 5, "y": 1.75},
+                {"matrix": [1, 6], "x": 6, "y": 2},
+
+                {"matrix": [6, 0], "x": 11, "y": 2},
+                {"matrix": [6, 1], "x": 12, "y": 1.75},
+                {"matrix": [6, 2], "x": 13, "y": 1.5},
+                {"matrix": [6, 3], "x": 14, "y": 1.75},
+                {"matrix": [6, 4], "x": 15, "y": 2},
+                {"matrix": [6, 5], "x": 16, "y": 2},
+                {"matrix": [6, 6], "x": 16, "y": 2},
+
+                {"matrix": [2, 0], "x": 0, "y": 3},
+                {"matrix": [2, 1], "x": 1, "y": 3},
+                {"matrix": [2, 2], "x": 2, "y": 3},
+                {"matrix": [2, 3], "x": 3, "y": 2.75},
+                {"matrix": [2, 4], "x": 4, "y": 2.5},
+                {"matrix": [2, 5], "x": 5, "y": 2.75},
+                {"matrix": [2, 6], "x": 6, "y": 3},
+
+                {"matrix": [7, 0], "x": 11, "y": 3},
+                {"matrix": [7, 1], "x": 12, "y": 2.75},
+                {"matrix": [7, 2], "x": 13, "y": 2.5},
+                {"matrix": [7, 3], "x": 14, "y": 2.75},
+                {"matrix": [7, 4], "x": 15, "y": 3},
+                {"matrix": [7, 5], "x": 16, "y": 3},
+                {"matrix": [7, 6], "x": 16, "y": 3},
+
+                {"matrix": [3, 0], "x": 0, "y": 4},
+                {"matrix": [3, 1], "x": 1, "y": 4},
+                {"matrix": [3, 2], "x": 2, "y": 4},
+                {"matrix": [3, 3], "x": 3, "y": 3.75},
+                {"matrix": [3, 4], "x": 4, "y": 3.5},
+                {"matrix": [3, 5], "x": 5, "y": 3.75},
+                {"matrix": [3, 6], "x": 6, "y": 4},
+
+                {"matrix": [8, 0], "x": 11, "y": 4},
+                {"matrix": [8, 1], "x": 12, "y": 3.75},
+                {"matrix": [8, 2], "x": 13, "y": 3.5},
+                {"matrix": [8, 3], "x": 14, "y": 3.75},
+                {"matrix": [8, 4], "x": 15, "y": 4},
+                {"matrix": [8, 5], "x": 16, "y": 4},
+                {"matrix": [8, 6], "x": 16, "y": 4},
+
+                {"matrix": [4, 3], "x": 4, "y": 4.5, "encoder":0},
+                {"matrix": [4, 4], "x": 5, "y": 5.5, "r":15, "rx":5.75, "ry":6.25},
+                {"matrix": [4, 5], "x": 6.25, "y": 5.5, "r":30, "rx":6, "ry":6},
+                {"matrix": [4, 6], "x": 7.5, "y": 5.25, "r":45, "rx":6.25, "ry":6},
+
+                {"matrix": [9, 0], "x": 11.5, "y": 7.75, "r":-45, "rx":10, "ry":9.75},
+                {"matrix": [9, 1], "x": 12.25, "y": 6.75, "r":-30, "rx":10.75, "ry":9.5},
+                {"matrix": [9, 2], "x": 12.5, "y": 6.25, "r":-15, "rx":10.25, "ry":8.5},
+                {"matrix": [9, 3], "x": 4, "y": 4.5, "encoder":1}
+            ]
+        }
+    }
+}
