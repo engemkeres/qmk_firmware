@@ -5,8 +5,8 @@
 *A short description of the keyboard/project*
 
 * Keyboard Maintainer: [Bence Baki](https://github.com/engemkeres)
-* Hardware Supported: *The PCBs, controllers supported*
-* Hardware Availability: *Links to where you can find this hardware*
+* Hardware Supported: STM32F401-powered vaucasy-pcb
+* Hardware Availability: source files for the project: https://github.com/engemkeres/vaucasy/
 
 Make example for this keyboard (after setting up your build environment):
 
@@ -20,8 +20,6 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 
 ## Bootloader
 
-Enter the bootloader in 3 ways:
+Enter the bootloader in:
 
-* **Bootmagic reset**: Hold down the key at (0,0) in the matrix (usually the top left key or Escape) and plug in the keyboard
-* **Physical reset button**: Briefly press the button on the back of the PCB - some may have pads you must short instead
-* **Keycode in layout**: Press the key mapped to `QK_BOOT` if it is available
+Switch the boot mode slider from keyboard mode to bootloader mode, then press the reset button.
