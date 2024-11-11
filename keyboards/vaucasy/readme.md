@@ -1,9 +1,5 @@
 # vaucasy
 
-![vaucasy](imgur.com image replace me!)
-
-*A short description of the keyboard/project*
-
 * Keyboard Maintainer: [Bence Baki](https://github.com/engemkeres)
 * Hardware Supported: STM32F401-powered vaucasy-pcb
 * Hardware Availability: source files for the project: https://github.com/engemkeres/vaucasy/
